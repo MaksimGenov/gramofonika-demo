@@ -24,6 +24,6 @@ export class ImgWithLoaderComponent implements OnChanges{
 
   onError(event) {
     // event.target.attributes.src.value = "src/assets/no-image-icon-23493.jpg"
-    this.src = "src/assets/no-image-icon-23494.png"
+    this.src = "/assets/no-image-icon-23494.png"
   }
 }
