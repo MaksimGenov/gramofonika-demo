@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3 album-img-container">
+      <app-img-with-loader [src]="album.image.url" [spinnerWidth]="100" [spinnerHeight]="100"></app-img-with-loader>  
+    </div>
+    <div class="col-8">
+      <h3>{{album.name | titlecase}}</h3>
+      <a routerLink="">{{album.artist | titlecase}}</a>
+      <p>GENRE: {{album.genre | titlecase}}</p>
+      <p>
+        <span>STYLE: </span>
+        <span *ngFor="let style of album.styles; let isLast=last">
+          {{style | titlecase}}{{isLast ? '' : ', '}}
+        </span>
+      </p>
+      <button class="btn btn-sm" (click)="addToWishlist()">add to wishlist</button>
+    </div>
+  </div>
+
+  <div class="my-5">
+    <app-nav-tabs [links]="tabLinks"></app-nav-tabs>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>

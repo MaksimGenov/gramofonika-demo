@@ -1,0 +1,8 @@
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" (click)="toogle()">
+    {{placeholder}}
+  </button>
+  <div class="dropdown-menu" *ngIf="isOpen">
+    <app-link *ngFor="let link of links" [link]="link" [class]="'dropdown-item'"></app-link>
+  </div>
+</div>

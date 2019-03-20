@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row my-5">
+    <h1>My Gramofonika</h1>
+  </div>
+  <div class="row mb-5 justify-content-between">
+    <div class="col-6 p-0">
+      <h5>Recently Added to Collection</h5>
+      <div class="row">
+        <div class="col-4 mb-4" *ngFor="let album of albums">
+          <app-album-card [album]="album"></app-album-card>
+        </div>
+      </div>
+      <a routerLink="">
+        <div class="bg-light p-4 d-flex justify-content-center">
+          <h2>View collection by records location</h2>
+        </div>
+      </a>
+    </div>
+    <div class="col-5">
+      <app-notification-panel></app-notification-panel>
+      <hr>
+      <app-messages-panel></app-messages-panel>
+      <hr>
+      <app-recent-posts-panel></app-recent-posts-panel>
+    </div>
+  </div>
+</div>

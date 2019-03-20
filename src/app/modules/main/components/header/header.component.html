@@ -1,0 +1,17 @@
+<div class="row navbar sticky-top bg-light">
+  <a class="navbar-brand" routerLink="">Gramofonika</a>
+  
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
+  
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="">Records for sale</a>
+    </li>
+    <li class="nav-item">
+      <app-dropdown [links]="dropdownLinks" [placeholder]="'My Gramofonika'"></app-dropdown>
+    </li>
+  </ul>
+</div>

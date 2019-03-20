@@ -1,0 +1,4 @@
+<div *ngFor="let option of options">
+  <input type="checkbox" value="{{option}}" (click)="onClick($event)">
+  <label for="">{{option}}</label>
+</div>

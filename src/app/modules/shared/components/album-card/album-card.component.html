@@ -1,0 +1,16 @@
+<a routerLink="/albums/{{album.id}}/releases">
+  <div class="border">
+    <div class="album-card-img-container">
+      <app-img-with-loader [src]="album.image.url" [spinnerHeight]="50" [spinnerWidth]="50"></app-img-with-loader>
+    </div>
+    <div class="bg-light p-2">
+      <div>
+        <small>{{album.artist | titlecase}}</small>
+      </div>
+      <div>
+        <small><b>{{album.name | titlecase}}</b></small>
+      </div>
+      <div><small>{{album.year}}</small></div>
+    </div>
+  </div>
+</a>

@@ -1,0 +1,9 @@
+<div>
+  <h5>Notifications</h5>
+  <div class="mb-3" *ngFor="let notification of notifications">
+    <div>
+      <small><b>{{notification.title | titlecase}}</b></small>
+    </div>
+    <div><small>{{notification.creationDate | date}}</small></div>
+  </div>
+</div>

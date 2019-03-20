@@ -1,0 +1,30 @@
+<div class="row mb-2 justify-content-between">
+  <div class="col-3">
+    <form class="form-inline">
+      <input class="form-control form-control-sm mr-2" type="search" placeholder="find release...">
+      <button class="btn btn-outline-success btn-sm" type="submit">Search</button>
+    </form>
+  </div>
+  <div class="col-9">
+    <button class="btn btn-secondary btn-sm mr-1" *ngFor="let filter of selectedFilters">{{filter}}</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-4">
+    <label>Country</label>
+    <app-multiselect [options]="countries" (update)="onCountrySelect($event)"></app-multiselect>
+    <br>
+    <label>Genre</label>
+    <app-multiselect [options]="genres" (update)="onGenreSelect($event)"></app-multiselect>
+  </div>
+  <div class="col-8">
+    <div class="row mb-2" *ngFor="let release of releases">
+      <div class="col-9 p-0 bg-light">
+        <app-album-vertical-card  [album]="release"></app-album-vertical-card>
+      </div>
+      <div class="col-3 p-0 bg-light">
+        <button class="btn btn-secondary btn-sm m-2 float-right" (click)="addToCollection()">Add to your collection</button>
+      </div>
+    </div>
+  </div>
+</div>

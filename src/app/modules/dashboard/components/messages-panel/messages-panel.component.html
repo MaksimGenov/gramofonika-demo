@@ -1,0 +1,16 @@
+<div>
+  <h5>New Messages</h5>
+  <div class="row mb-3" *ngFor="let message of messages">
+    <div class="col-1 message-card-img-container p-0">
+      <app-img-with-loader [src]="message.image.url" [spinnerHeight]="10" [spinnerWidth]="10"></app-img-with-loader>
+    </div>
+    <div class="col-11">
+      <div>
+        <small><b>{{message.title | titlecase}}</b></small>
+      </div>
+      <div>
+        <small>{{message.sender}}</small>
+      </div>
+    </div>
+  </div>
+</div>

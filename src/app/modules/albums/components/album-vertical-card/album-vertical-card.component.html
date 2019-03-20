@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-3 album-vertical-card-img-container p-0">
+    <app-img-with-loader [src]="album.image.url" [spinnerWidth]="50" [spinnerHeight]="50"></app-img-with-loader>  
+  </div>
+  <div class="col-8 p-0">
+    <h6>{{album.name | titlecase}}</h6>
+    <a routerLink="">{{album.artist | titlecase}}</a>
+    <p>GENRE: {{album.genre | titlecase}}</p>
+    <button class="btn btn-sm" (click)="toogleTracklist()">view tracklist</button>
+  </div>
+</div>

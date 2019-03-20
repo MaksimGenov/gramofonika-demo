@@ -1,0 +1,13 @@
+<div class="row mb-5">
+  <div class="col-7">
+    <p>Tracks</p>
+    <div class="row" *ngFor="let track of tracks">
+      <div class="col-1 pr-0">{{track.position | titlecase}}</div>
+      <div class="col-7 pl-0">{{track.name | titlecase}}</div>
+      <div class="col-3">{{track.lenght}}</div>
+    </div>
+  </div>
+  <div class="col-5">
+
+  </div>
+</div>
