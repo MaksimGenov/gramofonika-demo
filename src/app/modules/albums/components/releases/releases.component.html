@@ -17,10 +17,10 @@
     <label>Genre</label>
     <app-multiselect [options]="genres" (update)="onGenreSelect($event)"></app-multiselect>
   </div>
-  <div class="col-8">
+  <div class="col-8" @myInsertRemoveTrigger>
     <div class="row mb-2" *ngFor="let release of releases">
       <div class="col-9 p-0 bg-light">
-        <app-album-vertical-card  [album]="release"></app-album-vertical-card>
+        <app-album-vertical-card [album]="release"></app-album-vertical-card>
       </div>
       <div class="col-3 p-0 bg-light">
         <button class="btn btn-secondary btn-sm m-2 float-right" (click)="addToCollection()">Add to your collection</button>
