@@ -1,10 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { trigger, transition, style, animate, stagger, query } from '@angular/animations';
 
 @Component({
   selector: 'app-releases',
   templateUrl: './releases.component.html',
-  styleUrls: ['./releases.component.css']
+  styleUrls: ['./releases.component.css'],
+  animations: [
+    trigger('myInsertRemoveTrigger', [
+      transition('* => *', [
+        query(':enter', [
+          style({ opacity: 1, transform: 'scale(0)', 'transform-origin': 'left top'}),
+          stagger(200, [
+            // animate('1s', style({ opacity: 1 })),
+            animate(1000, style({transform: 'scale(1)'}))
+          ])
+        ])
+        
+      ]),
+      transition(':leave', [
+        animate('5s', style({ opacity: 0 }))
+      ])
+    ])
+  ]
 })
 export class ReleasesComponent implements OnInit {
   releases: Object[]
